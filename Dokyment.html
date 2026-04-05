@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+	<title>ДОКУМЕНТАЦИЯ ALEXANDRIA</title>
+	<link type="image/x-icon" href="images/logo-alexandria.ico" rel="shortcut icon">
+	<link type="Image/x-icon" href="images/logo-alexandria.ico" rel="icon">
+</head>
+
+<style>
+	
+	.body{
+		width: 100%;
+		height: 100%;
+		margin: 0px;
+		padding: 0px;
+	}
+	
+	.header{
+		margin: 0px;
+		padding: 0px;
+		width: 100%;
+		height: 100px;
+		background: rgba(119,119,119,1.00)
+	}
+	
+	.title-text{
+		text-align: center;
+		color: #ffffff;
+		font-weight: bold;
+		text-transform: uppercase;
+		margin: 0px;
+		padding-top: 10px;
+	}
+	
+	.ul{
+		width: 100%;
+		position: fixed;
+		padding: 0px;
+	}
+	
+	.btn-polsovatel{
+		text-align: center;
+	}
+	
+	.polzovatel{
+		background: rgba(119,119,119,0.00);
+		border: 0px;
+		padding-bottom: 10px;
+		color: #ffffff;
+		cursor: pointer
+	}
+	
+	.btn-kondificialnost{
+		text-align: center
+	}
+	
+	.kondifincialnost{
+		background: rgba(119,119,119,0.00);
+		border: 0px;
+		padding-bottom: 10px;
+		color: #ffffff;
+		cursor: pointer
+	}
+	
+	.body-polsovatel{
+		display: none;
+		position: inherit;
+		opacity: 1;
+		visibility: visible;
+		z-index: 99999999999999;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		text-decoration: none;
+		font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+		list-style: none;
+		font-weight: 500;
+		text-transform: uppercase;
+		color: white;
+	}
+	
+</style>
+	
+<script>
+$(document).ready(function() {
+  $(".polzovatel").click(function() {
+      $(".body-polsovatel").slideDown();
+	  $(".text-polsovatel").slideDown();
+  });
+});	
+	</script>
+	
+<body class="body">
+	<header class="header">
+		<p class="title-text">Документация ALEXANDRIA'S</p>
+		<ul class="ul">
+			
+			<div class="btn-polsovatel">
+				<button class="polzovatel">Условия пользователя</button>
+			</div>
+			
+			<div class="btn-kondificialnost">
+				<button class="kondifincialnost">Условия кондефенциальности</button>
+			</div>
+			
+		</ul>
+		
+		<div class="body-polsovatel">
+				<p class="text-polsovatel">Условия пользователя</p>
+		</div>
+		
+	</header>
+</body>
+</html>
