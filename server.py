@@ -10,7 +10,7 @@ def start_server():
 		while True:
 			print('Сервер запущен. (V0.1)')
 			client_socket, address = server.accept()
-			data = client_socket.recv(2048).decode('utf-8')
+			data = client_socket.recv(4096).decode('utf-8')
 			print(data)
 			content = load_page_from_get_request(data)
 			client_socket.send(content)
