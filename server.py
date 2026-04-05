@@ -14,7 +14,7 @@ def start_server():
 			content = load_page_from_get_request(data)
 			client_socket.send(content)
 			client_socket.shutdown(socket.SHIT_WR)
-	except KeybordInterrupt:
+	except KeyboardInterrupt:
 		server.close()
 		print('Сервер остановленн в ручную.')
 		
