@@ -22,7 +22,7 @@ def start_server():
 def load_page_from_get_requests(request_data):
 	HDRS = 'HTTP/1.1 200 OK\r\nContent-Type: text/html; charset=utf-8\r\n\r\n'
 	HDRS_404 = 'HTTP/1.1 404 OK\r\nContent-Type: text/html; charset=utf-8\r\n\r\n'
-	path = requests_data.split(' ')[1]
+	path = request_data.split(' ')[1]
 	response = ''
 	try:
 		with open('views'+path, 'rb') as file:
