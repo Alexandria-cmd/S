@@ -8,7 +8,7 @@ def start_server():
 		server.bind(('127.0.0.1',2000))
 		server.listen(100)
 		while True:
-			print('Сервер запущен.')
+			print('Сервер запущен. (V0.1)')
 			client_socket, address = server.accept()
 			data = client_socket.recv(1024).decode('utf-8')
 			print(data)
