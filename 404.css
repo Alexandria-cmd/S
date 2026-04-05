@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+.body{
+	height: 100%;
+}
+
+.right_article{
+	text-align: center;
+	color: #01B2D1;
+	width: 100%;
+	font-weight: bold;
+	font-style: normal;
+	font-family: "Source Sans Pro";
+	font-size: 200%
+}
+.text-vov{
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	color: #01B2D1;
+	font-weight: bold;
+	font-style: normal;
+	font-family: "Source Sans Pro";
+}
+
+.alexandria-bottom{
+	top: 50%;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	color: #01B2D1;
+	font-weight: bold;
+	font-style: normal;
+	font-family: "Source Sans Pro";
+}
