@@ -19,7 +19,7 @@ def start_server():
 		server.close()
 		print('Сервер остановленн в ручную.')
 		
-def load_page_from_get_requests(request_data):
+def load_page_from_get_request(request_data):
 	HDRS = 'HTTP/1.1 200 OK\r\nContent-Type: text/html; charset=utf-8\r\n\r\n'
 	HDRS_404 = 'HTTP/1.1 404 OK\r\nContent-Type: text/html; charset=utf-8\r\n\r\n'
 	path = request_data.split(' ')[1]
