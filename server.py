@@ -14,7 +14,7 @@ def start_server():
 			print(data)
 			content = load_page_from_get_request(data)
 			client_socket.send(content)
-			client_socket.shutdown(socket.SHIT_WR)
+			client_socket.shutdown(socket.SHUT_WR)
 	except KeyboardInterrupt:
 		server.close()
 		print('Сервер остановленн в ручную.')
@@ -22,8 +22,8 @@ def start_server():
 def load_page_from_get_requests(request_data):
 	HDRS = 'HTTP/1.1 200 OK\r\nContent-Type: text/html; charset=utf-8\r\n\r\n'
 	HDRS_404 = 'HTTP/1.1 404 OK\r\nContent-Type: text/html; charset=utf-8\r\n\r\n'
-	patf = requests_data.split(' ')[1]
-	respons = ''
+	path = requests_data.split(' ')[1]
+	response = ''
 	try:
 		with open('views'+path, 'rb') as file:
 			response = file.read()
