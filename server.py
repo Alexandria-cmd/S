@@ -34,4 +34,4 @@ def load_page_from_get_request(request_data):
 		return (HDRS_404 + 'Данной странницы не существует.').encode('utf-8')
 		
 if __name__ == '__main__':
-	start_server()
+	main()
