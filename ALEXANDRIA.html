@@ -1997,7 +1997,7 @@ $(document).ready(function() {
 	<p class="text-downloade">Скачать ALEXANDRIA'S</p>
 	  
     <div class="column_half left_half">
-	  <button class="imdiz-open"><strong>ALEXANDRIA ZIP-архив</strong></button>
+	  <button class="imdiz-open"><strong>Загрузка файлов</strong></button>
 	  <div class="imdiz-overlay"></div>
 	  <div class="imdiz-modal">
 		  <span class="imdiz-close"></span>
@@ -2014,7 +2014,10 @@ $(document).ready(function() {
 	  <div class="imdiz-modal">
 		  	<span class="imdiz-close"></span>
 	  	<h1 class="alexandria-zip-arhiv">Alexandria zip-архив</h1>
-		<p class="info-zip-arhiv">При нажатии на кнопку "Скачать" вы начнёте загрузку zip-архива ALEXANDRIA. В данном архиве будут храниться все версии программы, все файлы (за исключением исходного кода) и все дополнительные функции программы. Также в архиве будет находиться ALEXANDRIA EXTRA одна из мошнейших и устойчивых версий программы.<br><a href="https://drive.google.com/file/d/1IKn8r84ioY1A5kNIjv8xRXVIuK3RmRSm/view?usp=share_link" download="Alexandria.zip" class="floating-button">Скачать</a></p>
+		<p class="info-zip-arhiv">Для загрузки файлов на сервер нажмите кнопку снизу и выбирите файлы для загрузки, на данный момент стоит ограничение в 10 гигабайт отправки за раз.<br><form action="upload.php" method="post" enctype="multipart/form-data">
+        <input type="file" name="fileToUpload" id="fileToUpload">
+        <input type="submit" value="Загрузить файл" name="submit">
+    </form></p>
 		<div class="img-downloade-zip-ico">
 		  <img alt="ZIP-архив" src="images/zip-ico.png" class="zip-ico-downloade">
 		  <!--<img alt="ZIP-архив" src="images/alexandria-logo.png" class="zip-ico-downloade">-->
