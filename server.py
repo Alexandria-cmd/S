@@ -2,22 +2,24 @@ import socket
 import time
 from datetime import datetime
 
-def start_server():
-	try:
-		server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-		server.bind(('62.3.58.86',2000))
-		server.listen(100)
-		while True:
-			print('Сервер запущен. (V0.1)')
-			client_socket, address = server.accept()
-			data = client_socket.recv(30720).decode('utf-8')
-			print(data)
-			content = load_page_from_get_request(data)
-			client_socket.send(content)
-			client_socket.shutdown(socket.SHUT_WR)
-	except KeyboardInterrupt:
-		server.close()
-		print('Сервер остановленн в ручную.')
+def main():
+	def start_server():
+		try:
+			server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+			server.bind(('62.3.58.86',2000))
+			server.listen(100)
+			while True:
+				print('Сервер запущен. (V0.1)')
+				client_socket, address = server.accept()
+				data = client_socket.recv(30720).decode('utf-8')
+				print(data)
+				content = load_page_from_get_request(data)
+				client_socket.send(content)
+				client_socket.shutdown(socket.SHUT_WR)
+		except:
+			print('Ошибка сервера')
+			main()
+	start_server()
 		
 def load_page_from_get_request(request_data):
 	HDRS = 'HTTP/1.1 200 OK\r\nContent-Type: text/html; charset=utf-8\r\n\r\n'
