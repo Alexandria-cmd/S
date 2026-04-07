@@ -9,7 +9,7 @@ def main():
 			server.bind(('62.3.58.86',2000))
 			server.listen(100)
 			while True:
-				print('Сервер запущен. (V0.1)')
+				print('Сервер запущен. (V0.2)')
 				client_socket, address = server.accept()
 				data = client_socket.recv(30720).decode('utf-8')
 				print(data)
