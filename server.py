@@ -18,6 +18,7 @@ def start_server():
 			client_socket.shutdown(socket.SHUT_WR)
 	except:
 		print('Ошибка сервера')
+		start_server()
 		
 def load_page_from_get_request(request_data):
 	HDRS = 'HTTP/1.1 200 OK\r\nContent-Type: text/html; charset=utf-8\r\n\r\n'
