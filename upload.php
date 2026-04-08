@@ -3,6 +3,7 @@
 $targetDir = "uploads/";
 // Имя файла на сервере
 $targetFile = $targetDir . basename($_FILES["my_file"]["name"]);
+echo "Загрузка началась";
 
 // Проверка: загружен ли файл
 if(isset($_POST["submit"])) {
