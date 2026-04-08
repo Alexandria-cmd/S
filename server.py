@@ -18,6 +18,7 @@ def start_server():
 			client_socket.shutdown(socket.SHUT_WR)
 	except:
 		print('Ошибка сервера')
+		time.sleep(30)
 		start_server()
 		
 def load_page_from_get_request(request_data):
